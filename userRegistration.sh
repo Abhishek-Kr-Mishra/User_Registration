@@ -42,3 +42,16 @@ else
 	echo "Invalid Email Address"
 fi
 
+echo "********************"
+
+
+echo "Enter Phone Number"
+read contact
+contactRegex="^91 [6-9]{1}[0-9]{9}$"
+
+if [[ $contact =~ $contactRegex ]]
+then
+	echo "$contact is valid Phone Number"
+else
+	echo "Invalid Phone Number"
+fi
