@@ -55,3 +55,17 @@ then
 else
 	echo "Invalid Phone Number"
 fi
+
+echo "********************"
+
+echo "Enter the Password which have at least 8 characters"
+read paasword
+passwordRegex="[a-zA-Z]{8,}"
+
+if [[ $password =~ $passwordRegex ]]
+then
+	echo "$password have at least 8 characters"
+else
+	echo "Invalid Length"
+fi
+
