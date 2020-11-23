@@ -58,13 +58,13 @@ fi
 
 echo "********************"
 
-echo "Enter the Password which have at least 8 characters, 1 UpperCase Character and 1 Numeric value in It"
+echo "Enter the Password which have at least 8 characters, 1 UpperCase Character, 1 Numeric value and Exactly 1 Special Character in It"
 read paasword
-passwordRegex="^(?=.{8,}$)(?=.*?[0-9])(?=.*[A-Z])[0-9a-zA-Z]*"
+passwordRegex="^(?=.{8,}$)(?=.*?[0-9])(?=.*[A-Z])[0-9a-zA-Z]*[#!@$^&-][0-9a-zA-Z]*$"
 
 if [[ $password =~ $passwordRegex ]]
 then
-	echo "$password have at least 8 characters 1 Upper Case Character and 1 Numeric value"
+	echo "$password have at least 8 characters 1 Upper Case Character, 1 Numeric value and Exactly 1 special Character"
 else
 	echo "Password Criteria Doesn't Match"
 fi
