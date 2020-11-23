@@ -28,5 +28,17 @@ else
 fi
 
 
+echo "********************"
 
+
+echo "Enter a Email ID "
+read email
+emailRegex="^[a-zA-Z0-9]+([.\-_+][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zZ-Z]{2,4}([\.][a-zA-Z]{2})*$"
+
+if [[ $email =~ $emailRegex ]]
+then
+	echo "$email is a valid Email Address"
+else
+	echo "Invalid Email Address"
+fi
 
